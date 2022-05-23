@@ -51,7 +51,6 @@
     <Compile Include="Business\Table.cs" />
     <Compile Include="DataAccess\DrinkRepository.cs" />
     <Compile Include="DataAccess\FoodRepository.cs" />
-    <Compile Include="DataAccess\TableRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
