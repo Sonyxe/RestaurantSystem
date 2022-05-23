@@ -68,9 +68,7 @@
             this.TablesTb = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.ReceiptTb = new System.Windows.Forms.RichTextBox();
             this.Subtotallbl = new System.Windows.Forms.Label();
@@ -469,11 +467,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(868, 449);
+            this.label1.Location = new System.Drawing.Point(887, 451);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 22);
+            this.label1.Size = new System.Drawing.Size(56, 22);
             this.label1.TabIndex = 10;
-            this.label1.Text = "SubTotal";
+            this.label1.Text = "Total";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
@@ -490,19 +488,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(1106, 449);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 22);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Total";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -518,19 +504,6 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Print";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Crimson;
-            this.label13.Location = new System.Drawing.Point(1012, 449);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 22);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Tax";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button3
             // 
@@ -565,9 +538,9 @@
             this.Subtotallbl.ForeColor = System.Drawing.Color.Black;
             this.Subtotallbl.Location = new System.Drawing.Point(965, 451);
             this.Subtotallbl.Name = "Subtotallbl";
-            this.Subtotallbl.Size = new System.Drawing.Size(33, 20);
+            this.Subtotallbl.Size = new System.Drawing.Size(29, 20);
             this.Subtotallbl.TabIndex = 18;
-            this.Subtotallbl.Text = "......";
+            this.Subtotallbl.Text = "Eu";
             this.Subtotallbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
@@ -579,9 +552,7 @@
             this.Controls.Add(this.Subtotallbl);
             this.Controls.Add(this.ReceiptTb);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Tables);
@@ -645,9 +616,7 @@
         private System.Windows.Forms.Label TablesTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox ReceiptTb;
         private System.Windows.Forms.Label Subtotallbl;

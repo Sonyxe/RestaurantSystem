@@ -154,6 +154,17 @@ namespace RestaurantSystem
 
         double diabloup = 10, tunaup = 11, fiestaup = 9;
         double colaup = 2, juiceup = 2, coffeeup = 2;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DiabloCb.Checked=false;
+            TunaCb.Checked = false;
+            FiestaCb.Checked = false;
+            ColaCb.Checked = false;
+            JuiceCb.Checked = false;
+            CoffeeCb.Checked = false;
+        }
+
         private double diablotp, tunatp, fiestatp, colatp, juicetp, coffeetp;
         private double Subtotal = 0;
         private void ReceiptTb_TextChanged(object sender, EventArgs e)
@@ -163,6 +174,7 @@ namespace RestaurantSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
+
            diablotp = diabloup * Convert.ToDouble(DiabloTb.Text);
            tunatp = tunaup * Convert.ToDouble(TunaTb.Text);
            fiestatp = fiestaup * Convert.ToDouble(FiestaTb.Text);
@@ -177,7 +189,9 @@ namespace RestaurantSystem
             food.fiestatp= fiestaup * Convert.ToDouble(FiestaTb.Text);
 
             ReceiptTb.Clear();
-            ReceiptTb.AppendText("\t\t\t\t\tPIZZA JAZZ" + Environment.NewLine);
+            Subtotal = 0;
+        
+            ReceiptTb.AppendText("\t\t\t\t\tPIZZA JAZZ\t\t" + Date.Text + Environment.NewLine);
             ReceiptTb.AppendText("\t\t\t *****************" + Environment.NewLine);
 
             if (DiabloCb.Checked == true)
