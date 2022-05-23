@@ -560,14 +560,14 @@
             // Subtotallbl
             // 
             this.Subtotallbl.AutoSize = true;
-            this.Subtotallbl.BackColor = System.Drawing.Color.Transparent;
+            this.Subtotallbl.BackColor = System.Drawing.Color.White;
             this.Subtotallbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subtotallbl.ForeColor = System.Drawing.Color.White;
+            this.Subtotallbl.ForeColor = System.Drawing.Color.Black;
             this.Subtotallbl.Location = new System.Drawing.Point(965, 451);
             this.Subtotallbl.Name = "Subtotallbl";
-            this.Subtotallbl.Size = new System.Drawing.Size(41, 20);
+            this.Subtotallbl.Size = new System.Drawing.Size(33, 20);
             this.Subtotallbl.TabIndex = 18;
-            this.Subtotallbl.Text = "Rs/..";
+            this.Subtotallbl.Text = "......";
             this.Subtotallbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1

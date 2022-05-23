@@ -182,8 +182,38 @@ namespace RestaurantSystem
 
             if (DiabloCb.Checked == true)
             {
-                ReceiptTb.AppendText("\tDiablo:\t" + Environment.NewLine);
+                ReceiptTb.AppendText("\tDiablo:\t" + diablotp + Environment.NewLine);
                 Subtotal = Subtotal + diablotp;
+                Subtotallbl.Text = "" + Subtotal;
+            }
+            if (TunaCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tTuna:\t" + tunatp + Environment.NewLine);
+                Subtotal = Subtotal + tunatp;
+                Subtotallbl.Text = "" + Subtotal;
+            }
+            if (FiestaCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tFiesta:\t" + fiestatp + Environment.NewLine);
+                Subtotal = Subtotal + fiestatp;
+                Subtotallbl.Text = "" + Subtotal;
+             }
+            if (ColaCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tCola:\t" + colatp + Environment.NewLine);
+                Subtotal = Subtotal + colatp;
+                Subtotallbl.Text = "" + Subtotal;
+            }
+            if (JuiceCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tJuice:\t" + juicetp + Environment.NewLine);
+                Subtotal = Subtotal + juicetp;
+                Subtotallbl.Text = "" + Subtotal;
+            }
+            if (CoffeeCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tCoffee:\t" + coffeetp + Environment.NewLine);
+                Subtotal = Subtotal + coffeetp;
                 Subtotallbl.Text = "" + Subtotal;
 
             }
