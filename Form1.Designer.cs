@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.DiabloCb = new System.Windows.Forms.CheckBox();
             this.FoodTb = new System.Windows.Forms.Label();
-            this.ReceiptTb = new System.Windows.Forms.Panel();
             this.Drinks = new System.Windows.Forms.Panel();
             this.CoffeeTb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -73,6 +72,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.ReceiptTb = new System.Windows.Forms.RichTextBox();
+            this.Subtotallbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Food.SuspendLayout();
             this.Drinks.SuspendLayout();
@@ -110,9 +111,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(34, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 46);
+            this.label3.Size = new System.Drawing.Size(248, 46);
             this.label3.TabIndex = 1;
-            this.label3.Text = "PIZZA";
+            this.label3.Text = "PIZZA JAZZ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Food
@@ -229,14 +230,6 @@
             this.FoodTb.TabIndex = 0;
             this.FoodTb.Text = "Food";
             this.FoodTb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ReceiptTb
-            // 
-            this.ReceiptTb.BackColor = System.Drawing.Color.White;
-            this.ReceiptTb.Location = new System.Drawing.Point(872, 135);
-            this.ReceiptTb.Name = "ReceiptTb";
-            this.ReceiptTb.Size = new System.Drawing.Size(316, 276);
-            this.ReceiptTb.TabIndex = 2;
             // 
             // Drinks
             // 
@@ -532,7 +525,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Crimson;
-            this.label13.Location = new System.Drawing.Point(1000, 449);
+            this.label13.Location = new System.Drawing.Point(1012, 449);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 22);
             this.label13.TabIndex = 15;
@@ -547,12 +540,35 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Crimson;
-            this.button3.Location = new System.Drawing.Point(987, 492);
+            this.button3.Location = new System.Drawing.Point(995, 492);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 31);
             this.button3.TabIndex = 16;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // ReceiptTb
+            // 
+            this.ReceiptTb.Location = new System.Drawing.Point(869, 135);
+            this.ReceiptTb.Name = "ReceiptTb";
+            this.ReceiptTb.Size = new System.Drawing.Size(318, 285);
+            this.ReceiptTb.TabIndex = 17;
+            this.ReceiptTb.Text = "";
+            this.ReceiptTb.TextChanged += new System.EventHandler(this.ReceiptTb_TextChanged);
+            // 
+            // Subtotallbl
+            // 
+            this.Subtotallbl.AutoSize = true;
+            this.Subtotallbl.BackColor = System.Drawing.Color.Transparent;
+            this.Subtotallbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Subtotallbl.ForeColor = System.Drawing.Color.White;
+            this.Subtotallbl.Location = new System.Drawing.Point(965, 451);
+            this.Subtotallbl.Name = "Subtotallbl";
+            this.Subtotallbl.Size = new System.Drawing.Size(41, 20);
+            this.Subtotallbl.TabIndex = 18;
+            this.Subtotallbl.Text = "Rs/..";
+            this.Subtotallbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -560,6 +576,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1215, 564);
+            this.Controls.Add(this.Subtotallbl);
+            this.Controls.Add(this.ReceiptTb);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button2);
@@ -568,7 +586,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Tables);
             this.Controls.Add(this.Drinks);
-            this.Controls.Add(this.ReceiptTb);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -594,7 +611,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel Food;
         private System.Windows.Forms.Label FoodTb;
-        private System.Windows.Forms.Panel ReceiptTb;
         private System.Windows.Forms.Panel Drinks;
         private System.Windows.Forms.Label DrinksTb;
         private System.Windows.Forms.Timer timer1;
@@ -633,6 +649,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RichTextBox ReceiptTb;
+        private System.Windows.Forms.Label Subtotallbl;
     }
 }
 

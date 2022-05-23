@@ -5,17 +5,10 @@ namespace RestaurantSystem
 {
     public class FoodRepository
     {
-        public List<Food> foodList;
-
-        public FoodRepository()
-        {
-            foodList = new List<Food>();
-        }
-
-        public void AddFood(Food food)
-        {
-            foodList.Add(food);
-        }
+        public double diabloup = 10;
+        public double tunaup = 11;
+        public  double fiestaup = 9;
+        public double diablotp, tunatp, fiestatp;
     }
 }
 

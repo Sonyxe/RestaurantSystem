@@ -12,6 +12,8 @@ namespace RestaurantSystem
 {
     public partial class Form1 : Form
     {
+       
+
         public Form1()
         {
             InitializeComponent();
@@ -148,6 +150,48 @@ namespace RestaurantSystem
                 Table3Tb.Enabled = false;
                 Table3Tb.Text = "0";
             }
+        }
+
+        double diabloup = 10, tunaup = 11, fiestaup = 9;
+        double colaup = 2, juiceup = 2, coffeeup = 2;
+        private double diablotp, tunatp, fiestatp, colatp, juicetp, coffeetp;
+        private double Subtotal = 0;
+        private void ReceiptTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           diablotp = diabloup * Convert.ToDouble(DiabloTb.Text);
+           tunatp = tunaup * Convert.ToDouble(TunaTb.Text);
+           fiestatp = fiestaup * Convert.ToDouble(FiestaTb.Text);
+
+           colatp = colaup * Convert.ToDouble(ColaTb.Text);
+           juicetp = juiceup * Convert.ToDouble(JuiceTb.Text);
+           coffeetp = coffeeup * Convert.ToDouble(CoffeeTb.Text);
+
+            FoodRepository food = new FoodRepository();   
+            food.diablotp= diabloup * Convert.ToDouble(DiabloTb.Text);
+            food.tunatp= tunaup * Convert.ToDouble(TunaTb.Text);
+            food.fiestatp= fiestaup * Convert.ToDouble(FiestaTb.Text);
+
+            ReceiptTb.Clear();
+            ReceiptTb.AppendText("\t\t\t\t\tPIZZA JAZZ" + Environment.NewLine);
+            ReceiptTb.AppendText("\t\t\t *****************" + Environment.NewLine);
+
+            if (DiabloCb.Checked == true)
+            {
+                ReceiptTb.AppendText("\tDiablo:\t" + Environment.NewLine);
+                Subtotal = Subtotal + diablotp;
+                Subtotallbl.Text = "" + Subtotal;
+
+            }
+
+
+
+
+
         }
     }
 }
