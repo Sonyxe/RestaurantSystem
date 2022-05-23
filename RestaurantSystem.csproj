@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrinkRepository.cs" />
-    <Compile Include="FoodRepository.cs" />
+    <Compile Include="Business\Drink.cs" />
+    <Compile Include="Business\Food.cs" />
+    <Compile Include="Business\Table.cs" />
+    <Compile Include="DataAccess\DrinkRepository.cs" />
+    <Compile Include="DataAccess\FoodRepository.cs" />
+    <Compile Include="DataAccess\TableRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
